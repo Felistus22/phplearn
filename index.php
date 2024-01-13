@@ -12,7 +12,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
-echo "Connected successfully hurray";
+//echo "Connected successfully hurray";
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -55,7 +55,7 @@ echo "Connected successfully hurray";
         $result = $stmt->get_result();
         $row = $result->fetch_assoc();
 
-        if (is_array($row)) {
+        if ($row) {
           $_SESSION["Username"] = $row["Username"];
           $_SESSION["Pass"] = $row["Pass"];
           header("Location: login.php"); // Redirect to the correct file

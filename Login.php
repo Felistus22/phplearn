@@ -15,6 +15,7 @@ session_start();
     </style>
 </head>
 <body>
+    <h2>Ni Hao <?php echo $_SESSION['Username'] ?></h2>
     <h2>Welcome <?php //echo $_SESSION["Username"]; 
         if (isset($_SESSION["Username"])) {
             echo "<h2>Welcome {$_SESSION["Username"]}</h2>";
