@@ -58,7 +58,7 @@ if ($conn->connect_error) {
         if ($row) {
           $_SESSION["Username"] = $row["Username"];
           $_SESSION["Pass"] = $row["Pass"];
-          header("Location: login.php"); // Redirect to the correct file
+          header("Location: pay.php"); // Redirect to the correct file
           exit(); // Ensure that the script stops executing after the redirect
         } else {
           echo '<script type ="text/javascript">';
